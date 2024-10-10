@@ -9,8 +9,9 @@ class IrisHandler {
 
     var scripts:Array<Iris> = [];
 
-    public function new(folders:Array<String>) {
-        loadFolder(folders);
+    public function new(?folders:Array<String>) {
+        if (folders != null)
+            loadFolder(folders);
     }
 
     public function loadFolder(folders:Array<String>):Void {
