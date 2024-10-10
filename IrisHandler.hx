@@ -6,6 +6,7 @@ using StringTools;
 
 class IrisHandler {
     public static var path:String = "assets/scripts";
+    public static var extensions:Array<String> = ["hx", "hxs", "hxc"];
 
     var scripts:Array<Iris> = [];
 
@@ -26,7 +27,8 @@ class IrisHandler {
             var items:Array<String> = openfl.util.Assets.list('./${path + (folder != "" ? "/" : "")}$folder');
             #end
             for (item in items) {
-                if (!item.endsWith(".hx")) return;
+                for (extension in extensions)
+                    if (!item.endsWith('.$extension')) return;
                 var scriptPath:String = (folder != "" ? folder + "/" : folder) + item;
                 var script:Iris = new Iris(getText('./$path/$scriptPath'), {name: scriptPath, autoRun: true, autoPreset: true});
                 add(script);
