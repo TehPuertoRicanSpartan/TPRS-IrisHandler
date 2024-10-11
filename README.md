@@ -8,7 +8,7 @@ this is a little untested, so feel free to pull request on whether i'm doing wro
 inspired by [FNF-LÖVE's scriptshandler.lua](https://github.com/Stilic/FNF-LOVE/blob/main/funkin/backend/scripting/scriptshandler.lua)
 
 ## Functions
-### loadFolder(?folders:Array\<String>)
+### loadFolder(folders:Array\<String>)
 this will load every script in each directory. sub-directories won't work.
 ### add(script:Iris)
 adds a custom script to the handler's list
