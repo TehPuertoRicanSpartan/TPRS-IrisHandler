@@ -22,5 +22,5 @@ destroys every script in the list
 ## Other
 ### path:String = "assets/scripts" (variable)
 you may change this if you want scripts on another folder other than `assets/scripts`
-### extensions:Array\<String> = ["hx", "hxs", "hxc"]
+### extensions:Array\<String> = ["hx", "hxs", "hxc", "hscript"]
 put any extension you want to here! it HAS to be without the dot

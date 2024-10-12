@@ -6,7 +6,7 @@ using StringTools;
 
 class IrisHandler {
     public static var path:String = "assets/scripts";
-    public static var extensions:Array<String> = ["hx", "hxs", "hxc"];
+    public static var extensions:Array<String> = ["hx", "hxs", "hxc", "hscript"];
 
     var scripts:Array<Iris> = [];
 
@@ -36,7 +36,7 @@ class IrisHandler {
         }
     }
 
-    public function add(script:Dynamic):Void {
+    public function add(script:Iris):Void {
         if (script != null)
             scripts.push(script);
     }
