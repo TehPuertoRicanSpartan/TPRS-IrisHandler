@@ -28,7 +28,7 @@ class IrisHandler {
             #end
             for (item in items) {
                 for (extension in extensions)
-                    if (item.endsWith('.$extension')) break;
+                    if (!item.endsWith('.$extension')) return;
                 var scriptPath:String = (folder != "" ? folder + "/" : folder) + item;
                 var script:Iris = new Iris(getText('./$path/$scriptPath'), {name: scriptPath, autoRun: true, autoPreset: true});
                 add(script);
